@@ -1,10 +1,10 @@
 import actionType from "./actionType";
 
-export const mode = (mode)=>{
+export const actionMode = (mode)=>{
     return async (dispatch)=>{
         dispatch({
             type : actionType.MODE,
-            payload: null
+            payload: mode
         })
     }
 }

@@ -1,18 +1,17 @@
-import "./App.css";
 import TopNavbar from "./component/Navbar";
-import { Helmet } from "react-helmet";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 function App() {
-  const mode = useSelector((state)=>state.mode);  
+  const mode = useSelector((state) => state.mode.payload);
+  useEffect(() => {
+    document.body.style.backgroundColor =
+      mode !== undefined ? mode.background : "#292828";
+    document.body.style.color = mode !== undefined ? mode.color : "white";
+  }, [mode]);
   return (
     <div className="App">
-      <Helmet>
-        <style>{
-        "body {background-color:#292828; color:white;}"
-        }</style>
-      </Helmet>
-      <TopNavbar  />
+      <TopNavbar />
     </div>
   );
 }
