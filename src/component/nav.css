@@ -6,3 +6,18 @@
 .mode{
   cursor: pointer;
 }
+
+@media (max-width : 444px) {
+  #date{
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: rotate(90deg);
+    transition: 2s;
+  }
+  .mode{
+    /* font-size: ; */
+    transform: scale(1.8);
+    margin: .4em;
+  }
+}

@@ -1,6 +1,8 @@
+import "./App.css";
 import TopNavbar from "./component/Navbar";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import Weather from "./component/Weather";
 
 function App() {
   const mode = useSelector((state) => state.mode.payload);
@@ -12,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <TopNavbar />
+      <Weather/>
     </div>
   );
 }
