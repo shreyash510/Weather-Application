@@ -5,7 +5,13 @@ const initial = {
     color : "white"
 }
 
-const modeReducer = (state = initial, action)=>{
+const apiInitial = {
+    loading:false,
+    isError:false,
+    products:null, 
+}
+
+export const modeReducer = (state = initial, action)=>{
     const {type, payload} = action;
     switch(type){
         case actionType.MODE:
@@ -17,5 +23,20 @@ const modeReducer = (state = initial, action)=>{
     }
 }
 
-export default modeReducer;
+export const callApi = (state = apiInitial, action)=>{
+    const {type, payload} = action;
+    switch(type){
+        case actionType.API_CALL:
+            return {
+                ...state,
+                loading:false,
+                isError:false,
+                apiData: payload
+            }
+        default:
+            return state
+    }
+}
+
+
 

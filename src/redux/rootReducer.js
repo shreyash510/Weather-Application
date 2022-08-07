@@ -1,8 +1,9 @@
 import { combineReducers } from "redux";
-import modeReducer from "./reducer";
+import {modeReducer, callApi} from "./reducer";
 
 const rootReducer = combineReducers({
-    mode : modeReducer
+    mode : modeReducer,
+    apiCall : callApi
 })
 
 export default rootReducer;
