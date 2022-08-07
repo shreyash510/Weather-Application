@@ -23,7 +23,7 @@ const SearchCity = ({time}) => {
       >
         <form>
           <input
-            style={{ width: "94%", color:"white" }}
+            style={{ width: "94%", color:"red" }}
             className="text-center bg-transparent border p-2 m-2 rounded"
             type="text"
             placeholder="Enter city name..."
