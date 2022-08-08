@@ -58,6 +58,10 @@ const Weather = () => {
             <NextDaysWeather apiData={apiData}/>
           </div>
         </main>
+
+        <footer className ="text-center">
+          <p>Created by Shreyash Kolhe</p>
+        </footer>
       </>
     );
   }
