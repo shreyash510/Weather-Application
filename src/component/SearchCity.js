@@ -13,7 +13,8 @@ const SearchCity = ({time}) => {
 
   const btnClick = (e)=>{
     e.preventDefault();
-    dispatch(APiCall(city))
+    // const trimLo
+    dispatch(APiCall(city.trim().toLowerCase()))
   }
   return (
     <>
@@ -23,7 +24,7 @@ const SearchCity = ({time}) => {
       >
         <form>
           <input
-            style={{ width: "94%", color:"white", background:'rgb(41, 40, 40)' }}
+            style={{ width: "94%", color:"white", background:'rgb(41, 40, 40) ' }}
             className="text-center border p-2 m-2 rounded"
             type="text"
             placeholder="Enter city name..."
