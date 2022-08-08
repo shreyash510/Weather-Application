@@ -45,7 +45,6 @@ const NextDaysWeather = ({ apiData }) => {
   const allListDetails = allValues.map((v) => {
     return weatherList[v];
   });
-  const allKeys = Object.keys(result);
 
   return (
     <>
